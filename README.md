@@ -28,6 +28,8 @@ Already added it? Refresh **Flare Combined Source** in Flare Store to pick up ne
 
 These are examples; listings and available versions can change. The [current source list](https://masspimentel.github.io/flare-repo/sources.json) shows the feeds included in the catalog.
 
+See the [curation log](CURATION.md) for recently reviewed additions, their source and release links, and app-specific requirements.
+
 ## Updates
 
 The catalog is scheduled to refresh every six hours. Refresh the source in Flare Store to see the latest published listings. Installing an app update still uses your normal Flare Store process.

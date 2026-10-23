@@ -113,5 +113,40 @@
     "id": "openairdisplay",
     "name": "OpenAirDisplay",
     "url": "https://raw.githubusercontent.com/nmt3325/openairdisplay/main/public/openairdisplay-altstore.json"
+  },
+  {
+    "id": "musly",
+    "name": "Musly (AltGallery)",
+    "url": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/Musly/apps.json"
+  },
+  {
+    "id": "miniwatts",
+    "name": "MiniWatts (AltGallery)",
+    "url": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/MiniWatts/apps.json"
+  },
+  {
+    "id": "tsumiru",
+    "name": "Tsumiru (AltGallery)",
+    "url": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/Suwayomi-Tsumiru/apps.json"
+  },
+  {
+    "id": "doer",
+    "name": "Doer (AltGallery)",
+    "url": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/Doer/apps.json"
+  },
+  {
+    "id": "novella",
+    "name": "Novella (AltGallery)",
+    "url": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/Novella/apps.json"
+  },
+  {
+    "id": "moviepilotlite",
+    "name": "MoviePilotLite (AltGallery)",
+    "url": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/MoviePilotLite/apps.json"
+  },
+  {
+    "id": "pixiv-swiftui",
+    "name": "Pixiv-SwiftUI (AltGallery)",
+    "url": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/Pixiv-SwiftUI/apps.json"
   }
 ]
