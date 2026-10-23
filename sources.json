@@ -1,0 +1,57 @@
+[
+  {
+    "id": "dolphinios",
+    "name": "OatmealDome's AltStore Source",
+    "url": "https://altstore.oatmealdome.me"
+  },
+  {
+    "id": "utm",
+    "name": "UTM Repository",
+    "url": "https://alt.getutm.app"
+  },
+  {
+    "id": "flycast",
+    "name": "Flyinghead",
+    "url": "https://flyinghead.github.io/flycast-builds/altstore.json"
+  },
+  {
+    "id": "provenance",
+    "name": "Provenance Emulator",
+    "url": "https://provenance-emu.com/apps.json"
+  },
+  {
+    "id": "aidoku",
+    "name": "Aidoku Source",
+    "url": "https://raw.githubusercontent.com/Aidoku/Aidoku/altstore/apps.json"
+  },
+  {
+    "id": "ish",
+    "name": "iSH",
+    "url": "https://ish.app/altstore.json"
+  },
+  {
+    "id": "sidestore",
+    "name": "SideStore Official",
+    "url": "https://apps.sidestore.io/"
+  },
+  {
+    "id": "itorrent",
+    "name": "iTorrent Source",
+    "url": "https://xitrix.github.io/iTorrent/AltStore.json"
+  },
+  {
+    "id": "livecontainer",
+    "name": "LiveContainer",
+    "url": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/refs/heads/main/.github/apps.json"
+  },
+  {
+    "id": "feather",
+    "name": "Feather Repository",
+    "url": "https://raw.githubusercontent.com/claration/feather/main/app-repo.json"
+  },
+  {
+    "id": "stikdebug",
+    "name": "StikDebug & More!",
+    "url": "https://stikdebug.xyz/index.json"
+  }
+]
