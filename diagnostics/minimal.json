@@ -1,0 +1,24 @@
+{
+  "name": "Flare Minimal Test",
+  "identifier": "io.github.masspimentel.flare-repo.minimal-test",
+  "description": "One-app diagnostic source. Open the app list; no installation is needed.",
+  "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MiniWatts/icon.png",
+  "website": "https://github.com/masspimentel/flare-repo",
+  "tintColor": "#30E0F0",
+  "apps": [
+    {
+      "name": "MiniWatts",
+      "bundleIdentifier": "org.zhaohe.MiniWatts",
+      "developerName": "ResistanceTo",
+      "localizedDescription": "An iPhone battery and charging monitor built on Apple's private APIs: the charger's real watts, how much of that reaches the cell, where the rest goes as heat, and every temperature sensor in the phone. No network code — nothing it reads leaves your phone.",
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MiniWatts/icon.png",
+      "version": "1.5.1",
+      "versionDate": "2026-10-13",
+      "downloadURL": "https://github.com/ResistanceTo/MiniWatts/releases/download/v1.5.1/MiniWatts-unsigned.ipa",
+      "size": 3305290,
+      "minOSVersion": "17.0",
+      "screenshotURLs": []
+    }
+  ],
+  "news": []
+}

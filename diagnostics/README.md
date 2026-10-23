@@ -1,6 +1,26 @@
-# Screenshot compatibility test
+# Flare Store crash investigation
 
-Status: awaiting an on-device result; this is a diagnostic source, not a confirmed fix.
+## Device results
+
+- Main 52-app source: closes Flare Store when opening its app list on iOS 27.2, using the latest Flare Store according to the user.
+- Screenshot test below: the user reports the same crash. Removing modern screenshots alone is insufficient; do not publish it as a fix.
+- Minimal test: awaiting an on-device result.
+
+## One-app test
+
+Add this source and open **Flare Minimal Test**; no installation is needed:
+
+```text
+https://masspimentel.github.io/flare-repo/diagnostics/minimal.json
+```
+
+This frozen fixture contains only MiniWatts, with the legacy version fields exported by Flare Store's creator, no screenshot images, and explicit source artwork. The app's identity, description, icon, latest download, version, size, date, and minimum iOS requirement are copied from the captured main feed. It has no Patreon restriction or permission metadata to omit. Version history is deliberately absent from this small diagnostic fixture. This reduces the input to a baseline; it does not isolate one field or prove the cause if it succeeds.
+
+Report whether its app list opens, and whether other sources open successfully in Flare Store. If this also crashes, obtain the Flare Store crash report before trying further feed transformations.
+
+## Screenshot test
+
+Status: still crashes on the user's device. Retained to record the unsuccessful test.
 
 Add this as a separate source in Flare Store, then open its app list:
 
