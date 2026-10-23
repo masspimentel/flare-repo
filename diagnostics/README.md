@@ -2,9 +2,11 @@
 
 ## Device results
 
-- Main 52-app source: closes Flare Store when opening its app list on iOS 27.2, using the latest Flare Store according to the user.
-- Screenshot test below: the user reports the same crash. Removing modern screenshots alone is insufficient; do not publish it as a fix.
-- Minimal test: awaiting an on-device result.
+- The user clarified that Flare Store closes when entering its repositories screen, before selecting a source.
+- Screenshot and minimal fixtures therefore do not have isolated per-source results. The earlier description of the screenshot test as an independently failed experiment was incorrect.
+- Cause and device compatibility remain unconfirmed. These fixtures are diagnostic artifacts, not fixes.
+
+If the repositories screen itself crashes, do not add more diagnostic sources. Capture the Flare Store crash report through iPhone Settings instead. The fixtures below require a working source manager and cannot resolve an inaccessible repositories screen by themselves.
 
 ## One-app test
 
@@ -16,11 +18,11 @@ https://masspimentel.github.io/flare-repo/diagnostics/minimal.json
 
 This frozen fixture contains only MiniWatts, with the legacy version fields exported by Flare Store's creator, no screenshot images, and explicit source artwork. The app's identity, description, icon, latest download, version, size, date, and minimum iOS requirement are copied from the captured main feed. It has no Patreon restriction or permission metadata to omit. Version history is deliberately absent from this small diagnostic fixture. This reduces the input to a baseline; it does not isolate one field or prove the cause if it succeeds.
 
-Report whether its app list opens, and whether other sources open successfully in Flare Store. If this also crashes, obtain the Flare Store crash report before trying further feed transformations.
+When the repositories screen is accessible, report whether this fixture's app list opens. A crash report is needed before further feed transformations if the screen itself remains inaccessible.
 
 ## Screenshot test
 
-Status: still crashes on the user's device. Retained to record the unsuccessful test.
+Status: no isolated result; the repositories screen is inaccessible. Retained for reproducibility.
 
 Add this as a separate source in Flare Store, then open its app list:
 
