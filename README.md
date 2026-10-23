@@ -2,6 +2,8 @@
 
 A community-maintained app catalog for Flare Store. Add one source to browse music and media apps, readers, social clients, utilities, games, and emulators from a collection of developer and community feeds.
 
+**Compatibility investigation:** A user reports Flare Store closing when opening this source's app list on iOS 27.2. JSON and download checks pass, but device compatibility is not yet confirmed. Daily source additions are paused during investigation. See the [diagnostic test](diagnostics/README.md) if you encounter this problem.
+
 ## Add the source
 
 1. Open Flare Store and go to its repository/source manager.

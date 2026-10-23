@@ -28,6 +28,8 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Build combined feed
         run: python build.py
+      - name: Include frozen diagnostic sources
+        run: cp -R diagnostics public/diagnostics
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
