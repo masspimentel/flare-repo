@@ -1,75 +1,67 @@
 # Flare Combined Source
 
-One AltStore-compatible app catalog for Flare Store, assembled from developer feeds and a selected community collection. See the live build report for current app and source counts.
+A community-maintained app catalog for Flare Store. Add one source to browse music and media apps, readers, social clients, utilities, games, and emulators from a collection of developer and community feeds.
 
-## Add to Flare Store
+## Add the source
 
-In Flare Store's repository/source manager, add this source URL:
+1. Open Flare Store and go to its repository/source manager.
+2. Add the URL below and let the app load the catalog.
+3. Browse the listings, choose an app, and use your usual Flare Store signing and installation setup.
 
 ```text
 https://masspimentel.github.io/flare-repo/repo.json
 ```
 
-This endpoint becomes available after the first successful GitHub Pages deployment. It lists apps from the upstream feeds; it does not subscribe Flare Store to those feeds individually. IPA downloads and images use the original hosts. Your signing setup, app requirements, and any upstream access restrictions still apply.
+[Open the source JSON](https://masspimentel.github.io/flare-repo/repo.json)
 
-The generated [source list](https://masspimentel.github.io/flare-repo/sources.json) contains the original repository URLs if you prefer to add them separately. The [build report](https://masspimentel.github.io/flare-repo/build-report.json) records each app's upstream source and the latest successful build time.
+Already added it? Refresh **Flare Combined Source** in Flare Store to pick up new listings. You can keep using the same URL as the collection grows.
 
-The catalog covers music and media, comics and reading, social clients, terminals and developer tools, wireless display, games, and emulation. Developer feeds take priority over the community collection when bundle identifiers overlap. Community listings can include modified apps; their publisher is recorded in the build report.
+## What you can find
 
-## Hosting on GitHub Pages
+| Category | Examples |
+| --- | --- |
+| Music and video | Spotube, ByeTunes, Yattee |
+| Comics and reading | Aidoku, Paperback, Venera |
+| Social | Winston for Reddit, Apollo, Sable |
+| Utilities and tools | iSH, gTerm, OpenAirDisplay |
+| Games and emulation | Delta, PPSSPP, PokeMMO, Pocket8 |
 
-1. Put these project files in a public GitHub repository, including `.github/workflows/publish.yml`.
-2. Set the default branch to `main`.
-3. Under **Settings → Pages → Build and deployment**, select **GitHub Actions** as the source.
-4. Open **Actions → Publish source → Run workflow** and select `main`.
-5. Wait for both `build` and `deploy` to succeed. Add the `/repo.json` address above to Flare Store.
+These are examples; listings and available versions can change. The [current source list](https://masspimentel.github.io/flare-repo/sources.json) shows the feeds included in the catalog.
 
-For a fork or another repository name, substitute your account and repository in these example addresses. The JSON feed itself does not depend on this account name; you may also choose your own unique feed identifier in `build.py` before distributing it.
+## Updates
 
-The workflow runs on pushes to `main`, manual requests, and every six hours at minute 17 UTC. GitHub schedules may be delayed, and inactive public repositories may have schedules disabled; check the Actions tab if builds stop. A failed build skips deployment, preserving the previous Pages catalog. Your computer does not need to stay on.
+The catalog is scheduled to refresh every six hours. Refresh the source in Flare Store to see the latest published listings. Installing an app update still uses your normal Flare Store process.
 
-## Build locally
+An app's listing follows its original source, which may update later than the project's website or GitHub releases. If a catalog refresh fails, the previous working catalog stays available.
 
-Requires Python 3.12 or newer; no packages to install.
+You can check the [last successful refresh](https://masspimentel.github.io/flare-repo/build-report.json) or [publishing status](https://github.com/masspimentel/flare-repo/actions/workflows/publish.yml).
 
-```sh
-python -m unittest discover -s tests -v
-python build.py
-```
+## Before installing
 
-The builder creates `public/repo.json`, `public/sources.json`, and `public/build-report.json`. These generated files are ignored by Git; GitHub Actions builds them again before publishing.
+- Use your own working Flare Store signing setup. This source does not provide a signing certificate.
+- Check the app's iOS and device requirements. Some apps need JIT, special entitlements, or another installation method.
+- Any accounts, subscriptions, API keys, or other requirements set by the app's developer still apply.
+- Downloads come from the original hosts. Community feeds may include modified apps; inclusion here is not a security review or a guarantee that an app will run on your device.
 
-Paths default to this project directory, so `python /path/to/build.py` also works from another working directory. Optional `--sources PATH` and `--output PATH` override the locations.
+## Having trouble?
 
-To reproduce a build using saved feeds, put each feed in a directory under its configured ID (for example, `dolphinios.json`), then run:
+| Problem | What to try |
+| --- | --- |
+| New apps are missing | Refresh the existing source in Flare Store, then check the last successful refresh linked above. |
+| An app's version looks old | Check its original source; a new project release may not have reached that feed yet. |
+| A download fails | Try again later. The original download host may be unavailable or the link may have changed. |
+| An app will not install or open | Check its iOS requirements, signing requirements, and developer's installation instructions. |
 
-```sh
-python build.py --snapshots /path/to/saved-feeds
-```
+Still stuck? [Report a problem](https://github.com/masspimentel/flare-repo/issues/new) with the app name, version, your iOS version, and the error message you see.
 
-## Change the source list
+## Suggest an app or source
 
-Edit `sources.json`. Each entry needs a unique lowercase ID, a display name, and a public HTTPS JSON URL:
+[Open a request](https://github.com/masspimentel/flare-repo/issues/new) with the app's name and a link to its developer or source feed. A developer-maintained HTTPS source is the easiest to keep current.
 
-```json
-{
-  "id": "example",
-  "name": "Example developer source",
-  "url": "https://example.org/apps.json"
-}
-```
+Apps are combined into one catalog. If multiple feeds list the same app identifier, the first configured source wins. The [build report](https://masspimentel.github.io/flare-repo/build-report.json) records where each listing came from.
 
-Order expresses preference: when app bundle identifiers clash, the first source wins. The builder keeps that source's full app record; it does not mix releases from different publishers. The report lists suppressed duplicates.
+## For maintainers
 
-Modern version arrays and legacy flat version fields are supported. Version order, app permissions, OS requirements, and access restriction metadata are retained. Minor date formatting inconsistencies are normalized. Missing permissions are not invented. One combined source cannot represent conflicting source-level Patreon contexts; such a build fails with an explanation.
+For self-hosting, local builds, or editing the source list, see [MAINTAINING.md](MAINTAINING.md).
 
-If any source is unavailable or malformed, the build fails instead of publishing an incomplete app list. If an upstream source goes away permanently, remove it from `sources.json` and rerun the workflow.
-
-## Limits
-
-- Upstream listings can lag behind a project's latest release.
-- A listed app may require a different iOS version, JIT, special entitlements, or another installation method. Inclusion does not guarantee it will install or run through Flare Store.
-- The builder validates catalog metadata. It does not download, scan, sign, or audit IPA files, and it does not bypass upstream access requirements.
-- Upstream news is omitted. There is no web interface, database, or source discovery service.
-
-New project code is MIT licensed. Third-party app names, descriptions, images, and other upstream metadata retain their respective ownership and terms.
+Project code is [MIT licensed](LICENSE). App names, descriptions, images, and other upstream material belong to their respective owners.
