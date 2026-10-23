@@ -1,6 +1,6 @@
 # Flare Combined Source
 
-One AltStore-compatible app catalog for Flare Store, assembled from 11 developer feeds. The initial build contains 17 app listings. Future counts follow the upstream feeds.
+One AltStore-compatible app catalog for Flare Store, assembled from developer feeds and a selected community collection. See the live build report for current app and source counts.
 
 ## Add to Flare Store
 
@@ -13,6 +13,8 @@ https://masspimentel.github.io/flare-repo/repo.json
 This endpoint becomes available after the first successful GitHub Pages deployment. It lists apps from the upstream feeds; it does not subscribe Flare Store to those feeds individually. IPA downloads and images use the original hosts. Your signing setup, app requirements, and any upstream access restrictions still apply.
 
 The generated [source list](https://masspimentel.github.io/flare-repo/sources.json) contains the original repository URLs if you prefer to add them separately. The [build report](https://masspimentel.github.io/flare-repo/build-report.json) records each app's upstream source and the latest successful build time.
+
+The catalog covers music and media, comics and reading, social clients, terminals and developer tools, wireless display, games, and emulation. Developer feeds take priority over the community collection when bundle identifiers overlap. Community listings can include modified apps; their publisher is recorded in the build report.
 
 ## Hosting on GitHub Pages
 

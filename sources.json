@@ -53,5 +53,65 @@
     "id": "stikdebug",
     "name": "StikDebug & More!",
     "url": "https://stikdebug.xyz/index.json"
+  },
+  {
+    "id": "gterm",
+    "name": "gTerm",
+    "url": "https://madeye.github.io/gterm/altstore.json"
+  },
+  {
+    "id": "pico",
+    "name": "PICO iOS",
+    "url": "https://raw.githubusercontent.com/jevonlipsey/pico-ios/main/altstore.json"
+  },
+  {
+    "id": "venera",
+    "name": "Venera",
+    "url": "https://raw.githubusercontent.com/venera-app/venera/master/alt_store.json"
+  },
+  {
+    "id": "empo",
+    "name": "Empo",
+    "url": "https://raw.githubusercontent.com/mateo-m/empo-app/main/altstore-source.json"
+  },
+  {
+    "id": "agor",
+    "name": "Agor",
+    "url": "https://raw.githubusercontent.com/maroun2/agor-ios/main/altstore-source.json"
+  },
+  {
+    "id": "byetunes",
+    "name": "EduAlexxis Apps",
+    "url": "https://raw.githubusercontent.com/EduAlexxis/EduAlexxis-Altstore-Repo/main/apps.json"
+  },
+  {
+    "id": "pokemmo",
+    "name": "PokeMMO",
+    "url": "https://pokemmo.com/altstore/"
+  },
+  {
+    "id": "kb-sideload",
+    "name": "Kevin GitHub Sideload",
+    "url": "https://kb01111.github.io/Sideload-Sources/source.json"
+  },
+  {
+    "id": "sable",
+    "name": "Sable",
+    "url": "https://github.com/SableClient/Sable/releases/latest/download/altstore-source.json"
+  },
+  {
+    "id": "runemobile",
+    "name": "RuneMobile",
+    "url": "https://github.com/audaro/runemobile/releases/latest/download/altstore.json"
+  },
+  {
+    "id": "winston",
+    "name": "Winston for Reddit",
+    "url": "https://raw.githubusercontent.com/lo-cafe/winston-altstore/main/apps.json"
+  },
+  {
+    "id": "openairdisplay",
+    "name": "OpenAirDisplay",
+    "url": "https://raw.githubusercontent.com/nmt3325/openairdisplay/main/public/openairdisplay-altstore.json"
   }
 ]
