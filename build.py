@@ -115,6 +115,9 @@ def merge_sources(sources, feeds):
         if feed.get('nsfw'):
             catalog['nsfw'] = True
         for raw_app in feed['apps']:
+            # An app with an explicitly empty versions list has no downloadable release yet.
+            if isinstance(raw_app, dict) and raw_app.get('versions') == []:
+                continue
             app = normalize_app(raw_app)
             bundle = app['bundleIdentifier']
             if bundle in seen:
